@@ -3,7 +3,7 @@
 ## Getting Started
 
 ## Backend:
-- Clone repository : `https://github.com/anasraza57/messages-app.git`
+- Clone repository : `https://github.com/azizbit/django-vue-messaging-app`
 - Required `python 3.8.13`
 - Create and activate virtual environment.
 - Install dependencies: `pip install -r requirements.txt`
