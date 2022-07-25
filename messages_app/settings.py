@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     # Installed Packages
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_framework_swagger',
     'django_rest_passwordreset',
     'corsheaders',
 
@@ -95,11 +94,7 @@ AUTH_USER_MODEL = 'users.User'
 DATABASES = {
     'default': {
         'ENGINE': config('DB_ENGINE', default="django.db.backends.sqlite3"),
-        'NAME': config('DB_NAME', default="mydatabase"),
-        # 'USER': config('DB_USER', default=""),
-        # 'PASSWORD': config('DB_PASSWORD', default=""),
-        # 'HOST': config('DB_HOST', default=""),
-        # 'PORT': config('DB_PORT', default="")
+        'NAME': config('DB_NAME', default="messages_db")
     }
 }
 
