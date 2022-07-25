@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: minmax(200px, 300px) minmax(500px, auto) minmax(200px,
+            300px);
+    grid-template-rows: 60px auto;
+    background-color: #111;
+    width: 100vw;
+    height: calc(100vh - 55px);
+}
+
+.wrapper>div {
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search {
+    background-color: rgba(99, 45, 63, 0.3);
+    position: relative;
+    grid-column: 1 / 2;
+    overflow: hidden;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    padding: 6px 8px;
+    font-size: 1.2rem;
+    font-family: inherit;
+    background-color: rgba(99, 45, 63, 0.3);
+    color: #fff;
+    width: 75%;
+    margin-left: 10px;
+}
+
+.header {
+    background-color: #e91e63;
+    grid-column: 2 / 4;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.wrapper .usersList {
+    background-color: #111;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.profileContainer {
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    text-align: left;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.profileContainer:hover {
+    background-color: #e91e63;
+    transform: all .2s;
+    cursor: pointer;
+}
+
+.profileContainer:focus,
+.profileContainer.active {
+    background-color: rgba(233, 30, 99, 0.7);
+    outline: none;
+}
+
+.profileContainer:hover .settingsGear {
+    visibility: visible;
+}
+
+.profileHolder {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.profileName {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.profileLastMsg {
+    font-size: 1rem;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #ccc;
+}
+
+.profileAvatar {
+    flex: 0 0 70px;
+}
+
+.profileAvatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profileOptions {
+    flex: 0 0 30px;
+    padding: 0 5px;
+    text-align: center;
+    position: relative;
+}
+
+.settingsGear {
+    visibility: hidden;
+    right: 4px;
+    bottom: 0;
+    padding: 0 4px 3px;
+    z-index: 2;
+}
+
+.settingsGear i,
+.pinBubble i {
+    font-size: 1.4rem;
+}
+
+.lastDate {
+    font-size: 0.8rem;
+    padding-top: 5px;
+}
+
+.conversation {
+    background-color: #111;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.header .nav-left {
+    list-style: none;
+    flex: 0 0 60px;
+}
+
+header {
+    flex: 1;
+}
+
+header h4 {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.conversation .conversationContainer {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-y: auto;
+
+}
+
+.conversation .conversationContainer .firstPerson {
+    font-size: 16px;
+    float: left;
+    max-width: 50%;
+    white-space: pre-line;
+    text-align: left;
+}
+
+.conversation .conversationContainer .secondPerson {
+    font-size: 16px;
+    float: right;
+    max-width: 50%;
+    white-space: pre-line;
+    text-align: left;
+}
+
+.conversation .conversationContainer .messageTime {
+    font-size: 8px;
+    float: right;
+    position: relative;
+    transform: translateY(100%);
+    margin-left: 10px;
+}
+
+
+.conversation .conversationContainer:not(.welcome)> :first-child {
+    margin-top: auto !important;
+}
+
+.conversation .conversationContainer p {
+    font-size: 1.6rem;
+}
+
+.sendMessageContainer {
+    display: flex;
+    flex: 0 0 60px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.sendMessageContainer .sendContentContainer {
+    flex: 1;
+}
+
+.sendContentContainer textarea {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(99, 45, 63, 0.3);
+    border: none;
+    font-size: 1.4rem;
+    font-family: inherit;
+    font-weight: 300;
+    color: #fff;
+    padding: 14px;
+    overflow-x: auto;
+    resize: none;
+    outline: 0;
+}
+
+.sendMessageContainer .sendButtonContainer {
+    flex: 0 0 100px;
+}
+
+.sendButtonContainer button {
+    width: 100%;
+    height: 100%;
+    background-color: #e91e63;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sendButtonContainer button:hover {
+    background-color: #c55077;
+}
+
+.sendButtonContainer button:disabled {
+    background-color: #c55077;
+}
+.dropdown-toggle {
+    background: transparent;
+    border: none;
+    width: 12px;
+    height: 24px;
+    padding: 0;
+}
+
+.dropdown-toggle:hover {
+    background: transparent;
+    border: none;
+}
+.dropdown-toggle:focus {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.dropdown-toggle::after {
+    display: block;
+    margin-left: 0.255em;
+    content: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.dropdown-toggle img {
+    filter: invert(1);
+}
+
+.autocompleteWrapper {
+    position: relative
+}
+
+.send-btn {
+    height: 50px;
+}
+
+
+.simple-typeahead[data-v-0ccb6f26] {
+    position: relative;
+    width: 100%;
+}
+
+.simple-typeahead>input[data-v-0ccb6f26] {
+    margin-bottom: 20px;
+    color: red !important;
+    background-color: rebeccapurple !important;
+}
